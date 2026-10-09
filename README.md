@@ -92,7 +92,12 @@ Ce projet est un outil de gestion et d'analyse de corpus, conçu pour collecter 
 ## Notes supplémentaires
 
 - **Performances :** La collecte des données depuis Reddit et Arxiv dépend de votre connexion internet et des limitations des API.
-- **API Reddit :** Assurez-vous que vos identifiants (client_id, client_secret, user_agent) sont valides pour accéder aux données.
+- **API Reddit :** les identifiants sont lus depuis des variables d'environnement, jamais dans le code :
+  ```bash
+  export REDDIT_CLIENT_ID="votre_client_id"
+  export REDDIT_CLIENT_SECRET="votre_client_secret"
+  ```
+  Créez une application « script » sur https://www.reddit.com/prefs/apps pour les obtenir.
 - **Support :** Si vous rencontrez des problèmes, vérifiez les logs dans Jupyter Notebook ou contactez le développeur du projet.
 -  **Support :** Si vous rencontrez des problèmes pour lancer Jupyter crée un env dedié de préference venv ou conda.
 ---

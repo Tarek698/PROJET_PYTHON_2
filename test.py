@@ -1,3 +1,4 @@
+import os
 import praw
 
 reddit = praw.Reddit(
